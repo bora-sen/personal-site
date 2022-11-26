@@ -16,7 +16,7 @@ forth_row.classList.add("row-forth","flex");
 
 // HEADER ELEMENT
 const header_el  = document.createElement('h1');
-header_el.classList.add("header","flex","flex-cn-e");
+header_el.classList.add("header","font-futuristic","flex","flex-cn-e");
 header_el.innerText = "BORA";
 poster.appendChild(header_el);
 
@@ -25,7 +25,7 @@ poster.appendChild(header_el);
 const subheader_el = document.createElement('h2');
 const subheader_line = document.createElement('span');
 
-subheader_el.classList.add("subheader");
+subheader_el.classList.add("subheader","font-gothic");
 subheader_line.classList.add("subheader_line")
 
 subheader_el.innerText  = "Jr. Front-End Dev.";
@@ -64,8 +64,8 @@ const story__disc = document.createElement('p');
 story_el.appendChild(story__header);
 story_el.appendChild(story__disc);
 story_el.classList.add("story");
-story__header.classList.add("story__header");
-story__disc.classList.add("story__disc");
+story__header.classList.add("story__header","font-regular");
+story__disc.classList.add("story__disc","font-regular");
 
 story__header.innerText = "This area is about my story, how i got into programming etc.";
 story__disc.innerText  = "Sed porta est vitae leo volutpat, pharetra pharetra nulla laoreet. Mauris pulvinar tellus eget dui elementum congue. Fusce molestie malesuada tellus sit amet condimentum. Maecenas id mi ut leo porttitor aliquet non ut ex. Ut ante nulla, tempus ac rutrum id, vehicula at augue. Phasellus maximus elit ut cursus aliquet. Donec  enim tempus vitae.";
@@ -87,12 +87,13 @@ function createLinkElement(icon_url,link_url,disc){
 	link_a.href = link_url;
 	link_el.appendChild(link_a);
 
-	let img_el = document.createElement('img');
+	let img_el = document.createElement('object');
 	img_el.classList.add("link__img");
-	img_el.src = icon_url;
+	img_el.data = icon_url;
 	link_a.appendChild(img_el);
 
 	let disc_el = document.createElement('p');
+	disc_el.classList.add("link__p","font-regular");
 	disc_el.innerText = disc;
 	link_a.appendChild(disc_el);
 
@@ -101,14 +102,21 @@ function createLinkElement(icon_url,link_url,disc){
 }
 
 //FORTH ROW
+const links_div = document.createElement("div");
+links_div.classList.add("links__div");
+
+const links_title = document.createElement('h3');
+links_title.classList.add("links__title");
+links_title.innerText = "Links";
+
+
 const links_ul = document.createElement('ul');
 links_ul.classList.add("links_ul","flex");
 
 const links = [
-	['https://loremflickr.com/100/100','#','Test Link'],
-	['https://loremflickr.com/100/100/2','#','Testtte3'],
-	['https://loremflickr.com/100/100/3','#','Testtte3'],
-	['https://loremflickr.com/100/100/1','#','My Test 23Link']
+	['./src/images/box-biohazard.svg','#','Project'],
+	['./src/images/box-fragile.svg','#','LinkedIn'],
+	['./src/images/recycle.svg','#','Github']
 ]
 links.forEach(link=>{
 	let temp_link = createLinkElement(link[0],link[1],link[2]);
@@ -118,12 +126,14 @@ links.forEach(link=>{
 const decorative_div1 = document.createElement('div');
 decorative_div1.classList.add("decorative1","flex");
 
-const decorative_icon1_img = document.createElement('img');
+const decorative_icon1_img = document.createElement('object');
 decorative_icon1_img.classList.add('dec__icon1');
-decorative_icon1_img.src="https://loremflickr.com/430/539";
+decorative_icon1_img.data="./src/images/maze.svg";
 decorative_div1.appendChild(decorative_icon1_img);
 
-forth_row.appendChild(links_ul);
+links_div.appendChild(links_title);
+links_div.appendChild(links_ul);
+forth_row.appendChild(links_div);
 forth_row.appendChild(decorative_div1);
 
 poster.appendChild(forth_row);

@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 20000303 Stylable//EN"
+"http://www.w3.org/TR/2000/03/WD-SVG-20000303/DTD/svg-20000303-stylable.dtd">
+
+<svg width="1.8304in" height="2.0139in" viewBox="0 0 908 999">
+
+<path style="fill:#000;fill-rule:evenodd" d="M759,303 l0,518 -148,0 0,-518 -138,0 215,-299 216,299 -145,0z M289,303 l0,518 -148,0 0,-518 -139,0 217,-299 215,299 -145,0z M21,848 l432,0 432,0 0,148 -432,0 -432,0 0,-148z " />
+<path style="fill:#000" d="M762,303 l-6,0 0,518 6,0 0,-518z" />
+<path style="fill:#000" d="M611,819 l148,0 0,6 -148,0z" />
+<ellipse style="fill:#000" cx="760" cy="822" rx="3" ry="3" />
+<path style="fill:#000" d="M608,303 l6,0 0,518 -6,0z" />
+<ellipse style="fill:#000" cx="611" cy="822" rx="3" ry="3" />
+<path style="fill:#000" d="M473,300 l138,0 0,6 -138,0z" />
+<ellipse style="fill:#000" cx="611" cy="303" rx="3" ry="3" />
+<path style="fill:#000" d="M470,301 l5,4 215,-299 -4,-4 -216,299z" />
+<ellipse style="fill:#000" cx="473" cy="303" rx="3" ry="3" />
+<path style="fill:#000" d="M691,2 l-5,4 216,298 5,-3 -216,-299z" />
+<ellipse style="fill:#000" cx="689" cy="4" rx="3" ry="3" />
+<path style="fill:#000" d="M759,300 l145,0 0,6 -145,0z" />
+<ellipse style="fill:#000" cx="905" cy="303" rx="3" ry="3" />
+<ellipse style="fill:#000" cx="760" cy="303" rx="3" ry="3" />
+<path style="fill:#000" d="M292,303 l-6,0 0,518 6,0 0,-518z" />
+<path style="fill:#000" d="M141,819 l148,0 0,6 -148,0z" />
+<ellipse style="fill:#000" cx="290" cy="822" rx="3" ry="3" />
+<path style="fill:#000" d="M137,821 l7,0 0,-518 -7,0 0,518z" />
+<ellipse style="fill:#000" cx="141" cy="822" rx="3" ry="3" />
+<path style="fill:#000" d="M2,300 l139,0 0,6 -139,0z" />
+<ellipse style="fill:#000" cx="141" cy="303" rx="3" ry="3" />
+<path style="fill:#000" d="M0,301 l4,4 216,-299 -4,-4 -216,299z" />
+<ellipse style="fill:#000" cx="3" cy="303" rx="3" ry="3" />
+<path style="fill:#000" d="M221,2 l-5,4 216,298 5,-3 -216,-299z" />
+<ellipse style="fill:#000" cx="219" cy="4" rx="3" ry="3" />
+<path style="fill:#000" d="M289,300 l145,0 0,6 -145,0z" />
+<ellipse style="fill:#000" cx="435" cy="303" rx="3" ry="3" />
+<ellipse style="fill:#000" cx="290" cy="303" rx="3" ry="3" />
+<path style="fill:#000" d="M21,846 l864,0 0,6 -864,0z" />
+<path style="fill:#000" d="M882,848 l6,0 0,148 -6,0z" />
+<ellipse style="fill:#000" cx="885" cy="849" rx="3" ry="3" />
+<path style="fill:#000" d="M21,993 l864,0 0,6 -864,0z" />
+<ellipse style="fill:#000" cx="885" cy="996" rx="3" ry="3" />
+<path style="fill:#000" d="M19,848 l6,0 0,148 -6,0z" />
+<ellipse style="fill:#000" cx="22" cy="996" rx="3" ry="3" />
+<ellipse style="fill:#000" cx="22" cy="849" rx="3" ry="3" />
+
+</svg>

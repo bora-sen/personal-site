@@ -28,15 +28,31 @@
 
 
 	--bitter-lime : #B5f70eff;
+	--lime : #07fc03;
 	--black: #000000;
+	--bitter-yellow : #fcde03;
+	--purple : #b40ff7;
+	--light-purple : #984df8;
+	--blue : #401bf7;
+	--dark-blue : #331BAB;
+	--pink : #f70284;
 }
 a,
 p,
 h1,
 h2,
 h3{
-	color : var(--bitter-lime);
+	color : var(--lime);
 	cursor : default;
+}
+.font-regular {
+	font-family : "Roboto", sans-serif;
+}
+.font-gothic{
+	font-family: "GothicE";
+}
+.font-futuristic {
+	font-family : "1251 Regular";
 }
 .flex {
 	display : flex;
@@ -64,23 +80,28 @@ body{
 }
 .header{
 	font-size : 6rem;
-	font-family : "1251 Regular";
 }
 .subheader_line{
 	margin-right: .7rem;
 	width : 60%;
 	height : 1px;
-	background-color : var(--bitter-lime);
+	background-color : var(--lime);
 	border-radius : 2px;
 }
 .subheader{
 	font-size : 1.3rem;
-	font-family: "GothicE";
+}
+.link__img{
+	width : 6.25rem;
+	height: 6.25rem;
+	color : pink;
+	background-color : red;
 }
 
 .dec__icon1{
 	width : 100%;
 	height : 100%;
+	background-color : var(--bitter-lime);
 }
 
 .disc{
@@ -96,7 +117,7 @@ body{
 	font-size : 1.4rem;
 	font-family : "Roboto", sans-serif;
 	white-space : nowrap;
-	color : var(--bitter-lime);
+	color : var(--lime);
 }
 .content1{
 	width : 98%;
@@ -114,12 +135,25 @@ body{
 .story{
 	width : 60%;
 }
-.decorative1{
-	width : 200px;
-	height:300px;
-}
-.links_ul {
+
+.links__div{
+	background-image : url(./src/images/globe-wireframe.svg);
+	background-position: center;
+	background-size: cover;
+	background-color : var(--blue);
 	width : 70%;
+}
+
+.links__title{
+	font-family : "GothicE";
+	text-align : center;
+	font-size : 5rem;
+	margin-bottom : .5rem;
+	margin-top : 1rem;
+	color : var(--bitter-yellow);
+}
+
+.links_ul {
 	justify-content: space-around;
 	align-items: center;
 }
@@ -129,11 +163,16 @@ body{
 }
 .link_el > a{
 	text-decoration: none;
-	color : white;
+	text-align : center;
+}
+.link__p{
+	margin-top : .2rem;
+	color : var(--bitter-lime);
+	font-weight : 800;
 }
 .decorative1{
 	width : 30%;
-	height : 150px;
+	height : auto;
 }
 .dec_icon1{
 	width : 100%;
@@ -150,9 +189,12 @@ body{
 	font-weight: 800;
 	margin-bottom : .6rem;
 	line-height: 1.8rem;
+
+}
+.row-forth{
+	height : auto;
 }
 .story__disc {
-	font-family : "Roboto", sans-serif;
 	font-weight: 400;
 	line-height: 1.2rem;
 	filter : brightness(75%);
