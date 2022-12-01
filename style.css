@@ -19,8 +19,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
 
-
-
 *{
 	margin :	0;
 	padding:	0;
@@ -67,14 +65,15 @@ h3{
 	justify-content: center;
 	align-items: center;
 }
+
 body{
 	max-height : auto;
 }
 
 #poster {
 	padding : .5rem .5rem;
-	max-width : 750px;
-	margin: 15px 0;
+	max-width : 46.875rem;
+	margin: 0.9375rem 0;
 	justify-content: center;
 	background  : var(--black);
 }
@@ -84,9 +83,9 @@ body{
 .subheader_line{
 	margin-right: .7rem;
 	width : 60%;
-	height : 1px;
+	height : 0.0625rem;
 	background-color : var(--lime);
-	border-radius : 2px;
+	border-radius : 0.125rem ;
 }
 .subheader{
 	font-size : 1.3rem;
@@ -121,16 +120,15 @@ body{
 }
 .content1{
 	width : 98%;
-	height: 400px;
+	height: 25rem;
 }
 
 .row-third{
-	margin: 15px 0;
-
+	margin: 0.935rem 0;
 }
 .content2{
 	width:40%;
-	height:250px;
+	height:15.625rem;
 }
 .story{
 	width : 60%;
@@ -191,21 +189,72 @@ body{
 	line-height: 1.8rem;
 
 }
-.row-forth{
-	height : auto;
-}
 .story__disc {
 	font-weight: 400;
 	line-height: 1.2rem;
 	filter : brightness(75%);
 }
 
-@media only screen and (max-width : 650){
+.row-forth{
+	height : auto;
+}
 
+@media (max-width : 750px){
 	#poster{
+		max-width : 100vw;
+		background-color : black;
+	}
+	.disc > span{
+		 visibility: hidden;
+		 width : 0%;
+	}
+	.header {
+		font-size : 3.9rem;
+	}
+	.content1{
+		width : 100%;
+	}
+	.row-third{
+		margin: 0.935rem 0;
+		flex-direction: column;
+	}
+	.subheader_line{
+		margin-right: .7rem;
+		width : 40%;
+		height : 0.0625rem;
+		background-color : var(--lime);
+		border-radius : 0.125rem ;
+	}
+	.subheader{
+		font-size : 1.1rem;
+	}
+	.story{
+		width : 100%;
+	}
+	.link__img{
+		width : 9.65rem;
+		height: 9.65rem;
+		color : pink;
 		background-color : red;
 	}
-	.header{
-		font-size : 1.2rem;
+	.links_ul{
+		flex-direction: column;
+		width : 100%;
+	}
+	.links__div{
+		width : 100%;
+		margin-bottom : .8rem;
+	}
+	.decorative1{
+		width : 100%;
+	}
+	.row-forth{
+		flex-wrap: wrap;
+	}
+	.content2{
+		width : 100vw;
+	}
+	.row-third {
+		flex-direction : column-reverse;
 	}
 }

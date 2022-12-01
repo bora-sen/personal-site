@@ -1,7 +1,11 @@
+import createHeader from './src/components/header.js';
+import createSubHeader from './src/components/sub-header.js';
+import createListEl from './src/components/links.js';
+import createDecorative1 from './src/components/decorative1.js';
+
 const body = document.body;
 body.id  = "background";
 const poster = document.getElementById('poster');
-console.log("Hello World");
 
 //Create Row Div Elements:
 const first_row = document.createElement('div');
@@ -14,26 +18,8 @@ second_row.classList.add("row-second","flex");
 third_row.classList.add("row-third","flex");
 forth_row.classList.add("row-forth","flex");
 
-// HEADER ELEMENT
-const header_el  = document.createElement('h1');
-header_el.classList.add("header","font-futuristic","flex","flex-cn-e");
-header_el.innerText = "BORA";
-poster.appendChild(header_el);
-
-
-// FIRST ROW
-const subheader_el = document.createElement('h2');
-const subheader_line = document.createElement('span');
-
-subheader_el.classList.add("subheader","font-gothic");
-subheader_line.classList.add("subheader_line")
-
-subheader_el.innerText  = "Jr. Front-End Dev.";
-
-first_row.appendChild(subheader_line);
-first_row.appendChild(subheader_el);
-poster.appendChild(first_row);
-
+poster.appendChild(createHeader());
+poster.appendChild(createSubHeader());
 
 // SECOND ROW
 const disc_el  = document.createElement('div');
@@ -51,7 +37,6 @@ disc_el.appendChild(disc_span);
 second_row.appendChild(disc_el);
 second_row.appendChild(content_el);
 poster.appendChild(second_row);
-
 
 // THIRD ROW
 const content_el2 = document.createElement('div');
@@ -74,118 +59,7 @@ third_row.appendChild(content_el2);
 third_row.appendChild(story_el);
 poster.appendChild(third_row);
 
-
-
-// FORTH ROW
-function createLinkElement(icon_url,link_url,disc){
-	let link_el = document.createElement('li');
-	link_el.classList.add("link_el");
-
-
-	let link_a = document.createElement('a');
-	link_a.classList.add("link__a");
-	link_a.href = link_url;
-	link_el.appendChild(link_a);
-
-	let img_el = document.createElement('object');
-	img_el.classList.add("link__img");
-	img_el.data = icon_url;
-	link_a.appendChild(img_el);
-
-	let disc_el = document.createElement('p');
-	disc_el.classList.add("link__p","font-regular");
-	disc_el.innerText = disc;
-	link_a.appendChild(disc_el);
-
-	return link_el;
-
-}
-
-//FORTH ROW
-const links_div = document.createElement("div");
-links_div.classList.add("links__div");
-
-const links_title = document.createElement('h3');
-links_title.classList.add("links__title");
-links_title.innerText = "Links";
-
-
-const links_ul = document.createElement('ul');
-links_ul.classList.add("links_ul","flex");
-
-const links = [
-	['./src/images/box-biohazard.svg','#','Project'],
-	['./src/images/box-fragile.svg','#','LinkedIn'],
-	['./src/images/recycle.svg','#','Github']
-]
-links.forEach(link=>{
-	let temp_link = createLinkElement(link[0],link[1],link[2]);
-	links_ul.appendChild(temp_link);
-});
-
-const decorative_div1 = document.createElement('div');
-decorative_div1.classList.add("decorative1","flex");
-
-const decorative_icon1_img = document.createElement('object');
-decorative_icon1_img.classList.add('dec__icon1');
-decorative_icon1_img.data="./src/images/maze.svg";
-decorative_div1.appendChild(decorative_icon1_img);
-
-links_div.appendChild(links_title);
-links_div.appendChild(links_ul);
-forth_row.appendChild(links_div);
-forth_row.appendChild(decorative_div1);
+forth_row.appendChild(createListEl());
+forth_row.appendChild(createDecorative1());
 
 poster.appendChild(forth_row);
-//  #=============== VANTA SCRIPTS ====================#
-
-VANTA.NET({
-  el: "#content1",
-  mouseControls: true,
-  touchControls: true,
-  gyroControls: false,
-  minHeight: 200.00,
-  minWidth: 200.00,
-  scale: 1.00,
-  scaleMobile: 1.00,
-  color: 0xB5f70eff,
-  backgroundColor: 0x000,
-  points: 7.00,
-  maxDistance: 25.00,
-  spacing: 19.00,
-  showDots: false
-})
-
-
-VANTA.DOTS({
-  el: "#content2",
-  mouseControls: true,
-  touchControls: true,
-  gyroControls: false,
-  minHeight: 200.00,
-  minWidth: 200.00,
-  scale: 1.00,
-  scaleMobile: 1.00,
-	backgroundColor: 0x000,
-  color: 0xB5f70eff,
-  color2: 0xc8c8c8,
-  size: 2.50,
-  spacing: 62.00,
-  showLines: false
-})
-
-VANTA.WAVES({
-  el: "#background",
-  mouseControls: true,
-  touchControls: true,
-  gyroControls: false,
-  minHeight: 1100.00,
-  minWidth: 200.00,
-  scale: 1.00,
-  scaleMobile: 1.00,
-  color: 0x0d0d0d,
-  shininess: 0.00,
-  waveHeight: 22.00,
-  waveSpeed: 0.45,
-  zoom: 0.65
-})
